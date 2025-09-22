@@ -19,3 +19,75 @@
 <script src="script.js"></script>
 </body>
 </html>
+<!-- DevOps Lifecycle Section -->
+<section class="devops-lifecycle">
+  <h2>DevOps Lifecycle</h2>
+  <div class="lifecycle-container">
+    <div class="phase">Plan</div>
+    <div class="phase">Code</div>
+    <div class="phase">Build</div>
+    <div class="phase">Test</div>
+    <div class="phase">Release</div>
+    <div class="phase">Deploy</div>
+    <div class="phase">Operate</div>
+    <div class="phase">Monitor</div>
+  </div>
+</section>
+
+<style>
+.devops-lifecycle {
+  max-width: 900px;
+  margin: 40px auto;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.devops-lifecycle h2 {
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.lifecycle-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.phase {
+  background: #667eea;
+  color: #fff;
+  padding: 15px 20px;
+  border-radius: 50px;
+  min-width: 100px;
+  font-weight: 600;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.phase:hover {
+  transform: scale(1.1);
+}
+
+.phase:not(:last-child)::after {
+  content: '→';
+  color: #333;
+  font-weight: bold;
+  margin-left: 10px;
+  position: absolute;
+  right: -25px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@media(max-width:700px) {
+  .phase:not(:last-child)::after {
+    display: none;
+  }
+  .lifecycle-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+</style>
+
